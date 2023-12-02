@@ -1,5 +1,6 @@
 import * as vscode from "vscode";
-import { HelloWorld } from "./helloWorld";
+import { Create } from "./create";
+import { AddDependency } from "./addDependency";
 
 export interface Command {
   command: string;
@@ -9,9 +10,14 @@ export interface Command {
 export abstract class Commands {
   static register(context: vscode.ExtensionContext): void {
     for (const command of this.commands) {
-      command.register(context);
+      console.log(`Registering ${command.command}`);
+      let disposable = vscode.commands.registerCommand(command.command, () =>
+        command.register(context)
+      );
+      context.subscriptions.push(disposable);
     }
+    console.log(`Registered`);
   }
 
-  static commands: Array<Command> = [new HelloWorld()];
+  static commands: Array<Command> = [new Create(), new AddDependency()];
 }

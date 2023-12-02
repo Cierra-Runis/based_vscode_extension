@@ -17,8 +17,12 @@
   "contributes": {
     "commands": [
       {
-        "command": "based.helloWorld",
-        "title": "Hello World"
+        "command": "based.addDependency",
+        "title": "based: Add Dependency"
+      },
+      {
+        "command": "based.create",
+        "title": "based: Create..."
       }
     ]
   },
