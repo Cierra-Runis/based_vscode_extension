@@ -6,10 +6,10 @@ part 'persistence.g.dart';
 Persistence persistence(PersistenceRef ref) =>
     throw Exception('persistenceProvider not initialized');
 
-/// This service abstracts the persistence layer.
+/// [Persistence] abstracts the [SharedPreferences] layer
 class Persistence {
   final SharedPreferences sp;
-  static const prefix = 'ms';
+  static const prefix = '{{prefix}}';
   static const _spVersion = '${prefix}_spVersion';
 
   const Persistence._(this.sp);

@@ -1,0 +1,20 @@
+import 'package:{{projectName}}/index.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+part '{{snakeCaseName}}.g.dart';
+part '{{snakeCaseName}}.freezed.dart';
+
+@riverpod
+{{upperCaseName}} {{lowerCaseName}}({{upperCaseName}}Ref ref) =>
+    throw Exception('{{lowerCaseName}}Provider not initialized');
+
+/// [{{upperCaseName}}]
+@freezed
+class {{upperCaseName}} with _${{upperCaseName}} {
+  const {{upperCaseName}}._();
+
+  const factory {{upperCaseName}}() = _{{upperCaseName}};
+
+  static Future<{{upperCaseName}}> init() async {
+    return {{upperCaseName}}();
+  }
+}

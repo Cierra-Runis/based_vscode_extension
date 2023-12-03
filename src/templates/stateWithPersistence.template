@@ -1,0 +1,37 @@
+import 'package:{{projectName}}/index.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+part '{{snakeCaseName}}.g.dart';
+part '{{snakeCaseName}}.freezed.dart';
+
+/// Add [{{upperCaseName}}State] implements to [Persistence] layer
+///
+/// Naming the new keys, and provide default set/get methods
+extension _Ext on Persistence {}
+
+/// [{{upperCaseName}}State] which return by [ref.watch]
+///
+/// It contains [toString], [fromJson], [toJson], [copyWith] methods
+@freezed
+class {{upperCaseName}}State with _${{upperCaseName}}State {
+  const {{upperCaseName}}State._();
+
+  const factory {{upperCaseName}}State() = _{{upperCaseName}}State;
+
+  factory {{upperCaseName}}State.fromJson(Map<String, dynamic> json) =>
+      _${{upperCaseName}}StateFromJson(json);
+}
+
+/// State management for [{{upperCaseName}}State]
+///
+/// By watching [persistenceProvider],
+/// its state reacts when [Persistence] change
+@riverpod
+class {{upperCaseName}} extends _${{upperCaseName}} {
+  late final Persistence _pers;
+
+  @override
+  {{upperCaseName}} build() {
+    _pers = ref.watch(persistenceProvider);
+    return {{upperCaseName}}State();
+  }
+}
