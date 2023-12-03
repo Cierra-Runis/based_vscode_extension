@@ -6,10 +6,10 @@ import { createStateWithPersistence } from "./creates/createStateWithPersistence
 import { createStateWithFuture } from "./creates/createStateWithFuture";
 
 export enum Choice {
-  createPersistence = "Create persistence.dart",
-  createColorSchemes = "Create color_schemes.dart",
-  createStateWithPersistence = "New state with persistence",
-  createStateWithFuture = "New state with Future",
+  createPersistence = "$(database) Create persistence.dart",
+  createColorSchemes = "$(symbol-color) Create color_schemes.dart",
+  createStateWithPersistence = "$(pencil) Create state with Persistence",
+  createStateWithFuture = "$(timeline-open) Create state with Future",
 }
 
 export class Create implements Command {
