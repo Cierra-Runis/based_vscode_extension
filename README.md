@@ -1,71 +1,47 @@
-# based README
+<div align="center">
 
-This is the README for your extension "based". After writing up a brief description, we recommend including the following sections.
+  <img id="based_vscode_extension" width="96" alt="based_vscode_extension" src="https://github.com/Cierra-Runis/based_vscode_extension/blob/main/assets/icon.png">
 
-## Features
+  <p>『 based_vscode_extension - Based VSCode Extension!』</p>
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+</div>
 
-For example if there is an image subfolder under your extension project workspace:
+`Latest update: 2023-12-03 10:49:46`
 
-\!\[feature X\]\(images/feature-x.png\)
+[📚 Introduction](#-Introduction)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+[📸 Screenshots](#-Screenshots)
 
-## Requirements
+[📦 How to use](#-How-to-use)
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+[⏳ Rate of progress](#-Rate-of-progress)
 
-## Extension Settings
+[📌 Cautions](#-Cautions)
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+[🧑‍💻 Contributor](#-Contributor)
 
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+[🔦 Declaration](#-Declaration)
 
 ---
 
-## Following extension guidelines
+# 📚 Introduction
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+# 📸 Screenshots
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+# 📦 How to use
 
-## Working with Markdown
+# ⏳ Rate of progress
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+# 📌 Cautions
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+# 🧑‍💻 Contributor
 
-## For more information
+<a href="https://github.com/Cierra-Runis/based_vscode_extension/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Cierra-Runis/mercurius" />
+</a>
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+# 🔦 Declaration
 
-**Enjoy!**
+[![License](https://img.shields.io/github/license/Cierra-Runis/based_vscode_extension)](https://github.com/Cierra-Runis/based_vscode_extension/blob/main/LICENSE)
+
+This project is licensed under the terms of the `MIT` license. See [LICENSE](https://github.com/Cierra-Runis/based_vscode_extension/blob/main/LICENSE) for more details
