@@ -1,0 +1,8 @@
+{
+  "freezed": {
+    "prefix": "_freezed",
+    "body": [
+      "@JsonKey(name: _Ext.${1:key}) ${2|@Default(defaultValue),required, |} ${4:Class} ${5:key},"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "persistence_class": {
+    "prefix": "_pers_class",
+    "body": [
+      "static const ${1:key} = '${Persistence.prefix}_${1:key}';",
+      "${2:Class}? get${3:Class}() => null;",
+      "Future<bool> set${3:Class}(${2:Class}? value) async {",
+      "if (value == null) return sp.remove(${1:key});",
+      "return sp.setString(${1:key}, value);",
+      "}"
+    ]
+  },
+  "persistence_string": {
+    "prefix": "_pers_string",
+    "body": [
+      "static const ${1:key} = '${Persistence.prefix}_${1:key}';",
+      "String? get${2:Key}() => null;",
+      "Future<bool> set${2:Key}(String? value) async {",
+      "if (value == null) return sp.remove(${1:key});",
+      "return sp.setString(${1:key}, value);",
+      "}"
+    ]
+  },
+  "persistence_bool": {
+    "prefix": "_pers_bool",
+    "body": [
+      "static const ${1:key} = '${Persistence.prefix}_${1:key}';",
+      "bool? get${2:Key}() => null;",
+      "Future<bool> set${2:Key}(bool? value) async {",
+      "if (value == null) return sp.remove(${1:key});",
+      "return sp.setBool(${1:key}, value);",
+      "}"
+    ]
+  }
+}

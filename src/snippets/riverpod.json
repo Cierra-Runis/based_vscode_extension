@@ -1,0 +1,11 @@
+{
+  "riverpod": {
+    "prefix": "_riverpod_class",
+    "body": [
+      "Future<bool> set${1:Class}(${2:Class} value) async {",
+      "state = state.copyWith(${3:key}: value);",
+      "return _pers.set${1:Class}(value);",
+      "}"
+    ]
+  }
+}
