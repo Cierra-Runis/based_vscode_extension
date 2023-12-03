@@ -7,6 +7,7 @@
     "vscode": "^1.84.0"
   },
   "categories": [
+    "Snippets",
     "Other"
   ],
   "activationEvents": [
@@ -15,14 +16,28 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "snippets": [
+      {
+        "language": "dart",
+        "path": "./src/snippets/freezed.json"
+      },
+      {
+        "language": "dart",
+        "path": "./src/snippets/persistence.json"
+      },
+      {
+        "language": "dart",
+        "path": "./src/snippets/riverpod.json"
+      }
+    ],
     "commands": [
       {
-        "command": "based.addDependency",
-        "title": "based: Add Dependency"
+        "command": "based.addDependencies",
+        "title": "Based: Add Dependencies"
       },
       {
         "command": "based.create",
-        "title": "based: Create..."
+        "title": "Based: Create..."
       }
     ]
   },
