@@ -3,7 +3,7 @@ import { Commands } from "./commands/commands";
 
 export async function activate(context: vscode.ExtensionContext) {
   const flutterExt = vscode.extensions.getExtension("Dart-Code.flutter");
-  if (!flutterExt) {
+  if (flutterExt === undefined) {
     return vscode.window.showWarningMessage("No Flutter extension found.");
   }
 

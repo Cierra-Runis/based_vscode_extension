@@ -1,6 +1,6 @@
 import * as vscode from "vscode";
 import { Create } from "./create";
-import { AddDependencies } from "./addDependency";
+import { AddDependencies } from "./addDependencies";
 
 export interface Command {
   command: string;
