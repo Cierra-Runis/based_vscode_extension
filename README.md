@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img id="based_vscode_extension" width="96" alt="based_vscode_extension" src="https://github.com/Cierra-Runis/based_vscode_extension/blob/main/assets/icon.png">
+  <img id="based_vscode_extension" width="96" alt="based_vscode_extension" src="https://raw.githubusercontent.com/Cierra-Runis/based_vscode_extension/main/assets/icon.png">
 
   <p>『 based_vscode_extension - Based VSCode Extension!』</p>
 
