@@ -1,13 +1,14 @@
 import * as vscode from "vscode";
 import * as fs from "fs";
 import * as childProcess from "child_process";
+import axios from "axios";
 
 export abstract class Pubspec {
   static async getPubspecContent(): Promise<string | undefined> {
     const workspaceFolder = vscode.workspace.workspaceFolders?.[0];
 
     if (workspaceFolder === undefined) {
-      vscode.window.showErrorMessage("No workspace opened.");
+      vscode.window.showErrorMessage("💢 No workspace opened.");
       return;
     }
 
@@ -18,6 +19,20 @@ export abstract class Pubspec {
     if (pubspecFile) {
       const fileContent = fs.readFileSync(pubspecFile.fsPath, "utf8");
       return fileContent;
+    }
+  }
+
+  static async getPackageLatestVersion(
+    name: string
+  ): Promise<string | undefined> {
+    try {
+      const url = `https://pub.dev/packages/${name}.json`;
+      const res = await axios.get(url);
+      const latestVersion = res.data["versions"][0] as string;
+      return latestVersion;
+    } catch (e) {
+      console.error(e);
+      return undefined;
     }
   }
 
@@ -54,7 +69,7 @@ export abstract class Pubspec {
   ): Promise<void> {
     await runCommand(
       `flutter pub add ${dependencies
-        .map((e) => `'${e}:{"sdk":"flutter"}'`)
+        .map((e) => `${e} --sdk=flutter`)
         .join(" ")}`,
       { cwd }
     );

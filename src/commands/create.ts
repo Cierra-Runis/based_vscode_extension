@@ -28,6 +28,6 @@ export class Create implements Command {
         return createStateWithFuture(context);
     }
 
-    vscode.window.showInformationMessage("Canceled.");
+    vscode.window.showInformationMessage("🧊 Canceled.");
   }
 }

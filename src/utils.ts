@@ -16,7 +16,7 @@ export abstract class Utils {
     const extensionPath = context.extensionUri;
     const templatePath = vscode.Uri.joinPath(
       extensionPath,
-      `/src/templates/${templateName}.template`
+      `./assets/templates/${templateName}.template`
     );
     return (await vscode.workspace.fs.readFile(templatePath)).toString();
   }

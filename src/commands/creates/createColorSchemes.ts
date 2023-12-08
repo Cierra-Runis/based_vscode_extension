@@ -7,13 +7,13 @@ export async function createColorSchemes(
 ): Promise<void> {
   const workspaceFolder = vscode.workspace.workspaceFolders?.[0];
   if (workspaceFolder === undefined) {
-    vscode.window.showErrorMessage("No opened workspace.");
+    vscode.window.showErrorMessage("💢 No opened workspace.");
     return;
   }
 
   const projectName = await Pubspec.getProjectName();
   if (projectName === undefined) {
-    vscode.window.showErrorMessage("Can't get project name.");
+    vscode.window.showErrorMessage("💢 Can't get project name.");
     return;
   }
 
@@ -23,7 +23,7 @@ export async function createColorSchemes(
   });
 
   if (selected === undefined) {
-    vscode.window.showInformationMessage("No selected folder.");
+    vscode.window.showInformationMessage("🧊 Canceled.");
     return;
   }
 

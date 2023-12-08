@@ -1,9 +1,15 @@
-# Change Log
+## 0.0.4
 
-All notable changes to the "based" extension will be documented in this file.
+📖 Bundling Extensions
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## 0.0.3
 
-## [Unreleased]
+📖 Bundling Extensions
 
-- Initial release
+## 0.0.2
+
+🔧 Fix template not found
+
+## 0.0.1
+
+🌞 First publish

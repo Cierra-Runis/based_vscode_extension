@@ -26,6 +26,8 @@
 
 # 📚 Introduction
 
+[资源](https://zhaomenghuan.js.org/note/vscode/awesome-vscode.html)
+
 # 📸 Screenshots
 
 # 📦 How to use
@@ -37,7 +39,7 @@
 # 🧑‍💻 Contributor
 
 <a href="https://github.com/Cierra-Runis/based_vscode_extension/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Cierra-Runis/mercurius" />
+  <img src="https://contrib.rocks/image?repo=Cierra-Runis/based_vscode_extension" alt='contributors' />
 </a>
 
 # 🔦 Declaration

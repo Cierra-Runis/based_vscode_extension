@@ -8,13 +8,13 @@ export async function createPersistence(
   const workspaceFolder = vscode.workspace.workspaceFolders?.[0];
 
   if (workspaceFolder === undefined) {
-    vscode.window.showErrorMessage("No workspace opened.");
+    vscode.window.showErrorMessage("💢 No workspace opened.");
     return;
   }
 
   const projectName = await Pubspec.getProjectName();
   if (projectName === undefined) {
-    vscode.window.showErrorMessage("Can't get project name.");
+    vscode.window.showErrorMessage("💢 Can't get project name.");
     return;
   }
 
@@ -26,7 +26,7 @@ export async function createPersistence(
   });
 
   if (selected === undefined) {
-    vscode.window.showInformationMessage("No selected folder.");
+    vscode.window.showInformationMessage("🧊 Canceled.");
     return;
   }
 
@@ -48,7 +48,7 @@ export async function createPersistence(
   );
 
   vscode.window.showInformationMessage(
-    `Created persistence.dart for ${projectName}!`
+    `🚀 Created persistence.dart for ${projectName}!`
   );
 
   Pubspec.runBuilder(workspaceFolder.uri.fsPath);

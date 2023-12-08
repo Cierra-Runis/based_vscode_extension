@@ -7,27 +7,27 @@ export async function createStateWithPersistence(
 ): Promise<void> {
   const workspaceFolder = vscode.workspace.workspaceFolders?.[0];
   if (workspaceFolder === undefined) {
-    vscode.window.showErrorMessage("No opened workspace.");
+    vscode.window.showErrorMessage("💢 No opened workspace.");
     return;
   }
 
   const projectName = await Pubspec.getProjectName();
   if (projectName === undefined) {
-    vscode.window.showErrorMessage("Can't get project name.");
+    vscode.window.showErrorMessage("💢 Can't get project name.");
     return;
   }
 
   const name = await vscode.window.showInputBox({
-    placeHolder: "Enter state name here",
+    placeHolder: "Enter state name here...",
   });
 
   console.log(name);
 
   if (name === undefined) {
-    vscode.window.showInformationMessage("Canceled.");
+    vscode.window.showInformationMessage("🧊 Canceled.");
     return;
   } else if (name.length <= 1 || !Utils.isCamelCase(name)) {
-    vscode.window.showErrorMessage(`Invalid name: ${name}`);
+    vscode.window.showErrorMessage(`💢 Invalid name: ${name}`);
     return createStateWithPersistence(context);
   }
 
@@ -44,7 +44,7 @@ export async function createStateWithPersistence(
   });
 
   if (selected === undefined) {
-    vscode.window.showInformationMessage("No selected folder.");
+    vscode.window.showInformationMessage("🧊Canceled.");
     return;
   }
 
