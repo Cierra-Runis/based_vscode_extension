@@ -53,15 +53,15 @@
     "snippets": [
       {
         "language": "dart",
-        "path": "./src/snippets/freezed.json"
+        "path": "./assets/snippets/freezed.json"
       },
       {
         "language": "dart",
-        "path": "./src/snippets/persistence.json"
+        "path": "./assets/snippets/persistence.json"
       },
       {
         "language": "dart",
-        "path": "./src/snippets/riverpod.json"
+        "path": "./assets/snippets/riverpod.json"
       }
     ],
     "commands": [

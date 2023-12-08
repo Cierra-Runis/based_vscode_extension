@@ -1,3 +1,7 @@
+## 0.0.5
+
+🔧 Fix snippets not found
+
 ## 0.0.4
 
 📖 Bundling Extensions
