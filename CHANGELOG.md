@@ -1,3 +1,9 @@
+## 0.0.6
+
+1. 📖Add github action
+2. 📖Improve alert message
+3. 📖Improve pubspec & workspace select
+
 ## 0.0.5
 
 🔧 Fix snippets not found
