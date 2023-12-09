@@ -26,7 +26,8 @@
 
 # 📚 Introduction
 
-[资源](https://zhaomenghuan.js.org/note/vscode/awesome-vscode.html)
+[awesome vscode](https://zhaomenghuan.js.org/note/vscode/awesome-vscode.html)
+[VSCode Extension API](https://code.visualstudio.com/api)
 
 # 📸 Screenshots
 

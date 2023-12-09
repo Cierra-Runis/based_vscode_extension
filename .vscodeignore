@@ -4,7 +4,7 @@ src/**
 **/test
 example
 **/*.js
-!out/main.js
+!out/extension.js
 .gitignore
 .yarnrc
 vsc-extension-quickstart.md
