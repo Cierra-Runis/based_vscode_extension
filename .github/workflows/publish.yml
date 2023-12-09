@@ -1,10 +1,7 @@
 on:
   push:
-    branches:
-    - main
-  release:
-    types:
-    - created
+    tags: "*"
+
 
 jobs:
   build:
