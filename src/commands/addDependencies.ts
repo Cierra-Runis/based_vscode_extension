@@ -11,7 +11,7 @@ export class AddDependencies implements Command {
       return;
     }
 
-    vscode.window.showInformationMessage("🧊 Adding dependencies...");
+    vscode.window.showInformationMessage("🔥 Adding dependencies...");
 
     try {
       await Pubspec.addSdkDependencies(

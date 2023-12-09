@@ -21,7 +21,7 @@ export class PubLatestVersion implements Hover {
         const latestVersion = await Pubspec.getPackageLatestVersion(name);
         if (latestVersion) {
           return new vscode.Hover([
-            `🚀 Latest version of ${name} is [${latestVersion}](https://pub.dev/packages/${name}). 🚀`,
+            `🚀 Latest version of [${name}](https://pub.dev/packages/${name}) is [${latestVersion}](https://pub.dev/packages/${name}/versions/${latestVersion}) 🚀`,
             version.match(latestVersion)
               ? `🔥 You are using the latest version! 🔥`
               : `🧊 Please consider to update it! 🧊`,
