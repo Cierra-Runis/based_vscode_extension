@@ -1,3 +1,10 @@
+## 0.0.7
+
+1. 📖Improve PubLatestVersion hover
+2. 📖Add ignore
+3. 📖Update devDependencies
+4. 📖Update github action
+
 ## 0.0.6
 
 1. 📖Add github action
