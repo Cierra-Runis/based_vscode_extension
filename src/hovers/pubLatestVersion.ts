@@ -45,12 +45,12 @@ export class PubLatestVersion implements Hover {
               `🧊 Please consider to use [Caret syntax](https://dart.dev/tools/pub/dependencies#caret-syntax). 🧊`,
               `👀 See [Use caret syntax](https://dart.dev/tools/pub/dependencies#use-caret-syntax) in [Best practices](https://dart.dev/tools/pub/dependencies#best-practices). 👀`,
             ]
-          : showFormat[0] === version
+          : showFormat[0] === latestVersion
           ? [`🔥 You are using the latest version! 🔥`]
           : [`🧊 Please consider to update it! 🧊`];
 
       return new vscode.Hover([
-        `🚀 Latest version of [${name}](https://pub.dev/packages/${name}) is [${latestVersion}](https://pub.dev/packages/${name}/changlog) 🚀`,
+        `🚀 Latest version of [${name}](https://pub.dev/packages/${name}) is [${latestVersion}](https://pub.dev/packages/${name}/changelog) 🚀`,
         ...details,
       ]);
     },
