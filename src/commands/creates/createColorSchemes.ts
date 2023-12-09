@@ -3,20 +3,10 @@ import { Pubspec } from "../../pubspec";
 import { Utils } from "../../utils";
 
 export async function createColorSchemes(
-  context: vscode.ExtensionContext
+  context: vscode.ExtensionContext,
+  workspaceFolder: vscode.WorkspaceFolder,
+  projectName: string
 ): Promise<void> {
-  const workspaceFolder = vscode.workspace.workspaceFolders?.[0];
-  if (workspaceFolder === undefined) {
-    vscode.window.showErrorMessage("💢 No opened workspace.");
-    return;
-  }
-
-  const projectName = await Pubspec.getProjectName();
-  if (projectName === undefined) {
-    vscode.window.showErrorMessage("💢 Can't get project name.");
-    return;
-  }
-
   const selected = await vscode.window.showSaveDialog({
     defaultUri: vscode.Uri.joinPath(workspaceFolder.uri, `color_schemes.dart`),
     filters: { ["Dart"]: ["dart"] },

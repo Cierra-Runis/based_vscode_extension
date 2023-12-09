@@ -3,32 +3,20 @@ import { Pubspec } from "../../pubspec";
 import { Utils } from "../../utils";
 
 export async function createStateWithPersistence(
-  context: vscode.ExtensionContext
+  context: vscode.ExtensionContext,
+  workspaceFolder: vscode.WorkspaceFolder,
+  projectName: string
 ): Promise<void> {
-  const workspaceFolder = vscode.workspace.workspaceFolders?.[0];
-  if (workspaceFolder === undefined) {
-    vscode.window.showErrorMessage("💢 No opened workspace.");
-    return;
-  }
-
-  const projectName = await Pubspec.getProjectName();
-  if (projectName === undefined) {
-    vscode.window.showErrorMessage("💢 Can't get project name.");
-    return;
-  }
-
   const name = await vscode.window.showInputBox({
     placeHolder: "Enter state name here...",
   });
-
-  console.log(name);
 
   if (name === undefined) {
     vscode.window.showInformationMessage("🧊 Canceled.");
     return;
   } else if (name.length <= 1 || !Utils.isCamelCase(name)) {
     vscode.window.showErrorMessage(`💢 Invalid name: ${name}`);
-    return createStateWithPersistence(context);
+    return createStateWithPersistence(context, workspaceFolder, projectName);
   }
 
   const upperCaseName = name[0].toUpperCase() + name.slice(1);

@@ -4,20 +4,30 @@ import * as childProcess from "child_process";
 import axios from "axios";
 
 export abstract class Pubspec {
-  static async getPubspecContent(): Promise<string | undefined> {
-    const workspaceFolder = vscode.workspace.workspaceFolders?.[0];
+  static async getPubspecContent(
+    workspaceFolder: vscode.WorkspaceFolder
+  ): Promise<string | undefined> {
+    const pubspecFiles = await vscode.workspace.findFiles(
+      new vscode.RelativePattern(workspaceFolder.uri, `**/pubspec.yaml`),
+      "**/{windows,linux,ios,macos,web,android}/**"
+    );
 
-    if (workspaceFolder === undefined) {
-      vscode.window.showErrorMessage("💢 No workspace opened.");
+    if (pubspecFiles.length === 0) {
       return;
     }
 
-    const pubspecFile = (
-      await vscode.workspace.findFiles("**/pubspec.yaml", null, 1)
-    ).at(0);
+    if (pubspecFiles.length === 1) {
+      const fileContent = fs.readFileSync(pubspecFiles[0].fsPath, "utf8");
+      return fileContent;
+    }
+
+    const pubspecFile = await vscode.window.showQuickPick(
+      pubspecFiles.map((e) => e.fsPath),
+      { title: "🧊 Which pubspec.yaml would you use?" }
+    );
 
     if (pubspecFile) {
-      const fileContent = fs.readFileSync(pubspecFile.fsPath, "utf8");
+      const fileContent = fs.readFileSync(pubspecFile, "utf8");
       return fileContent;
     }
   }
@@ -31,13 +41,14 @@ export abstract class Pubspec {
       const latestVersion = res.data["versions"][0] as string;
       return latestVersion;
     } catch (e) {
-      console.error(e);
       return undefined;
     }
   }
 
-  static async getProjectName(): Promise<string | undefined> {
-    const content = await Pubspec.getPubspecContent();
+  static async getProjectName(
+    workspaceFolder: vscode.WorkspaceFolder
+  ): Promise<string | undefined> {
+    const content = await Pubspec.getPubspecContent(workspaceFolder);
 
     if (content === undefined) {
       return;
