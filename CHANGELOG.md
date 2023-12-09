@@ -1,3 +1,7 @@
+## 0.0.9
+
+🔧 Fix PubLatestVersion hover error
+
 ## 0.0.8
 
 🔧 Fix PubLatestVersion hover error
