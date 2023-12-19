@@ -1,6 +1,7 @@
 import * as vscode from "vscode";
 import { Commands } from "./commands/commands";
 import { Hovers } from "./hovers/hovers";
+import { Colors } from "./colors/colors";
 
 export async function activate(context: vscode.ExtensionContext) {
   const flutterExt = vscode.extensions.getExtension("Dart-Code.flutter");
@@ -12,6 +13,7 @@ export async function activate(context: vscode.ExtensionContext) {
 
   Hovers.register(context);
   Commands.register(context);
+  Colors.register(context);
 
   console.log(`All registered`);
 }

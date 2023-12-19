@@ -11,7 +11,7 @@ export class Hovers {
   static register(context: vscode.ExtensionContext): void {
     for (const hover of this.hovers) {
       console.log(`Registering Hover ${hover.hover}`);
-      let disposable = vscode.languages.registerHoverProvider(
+      const disposable = vscode.languages.registerHoverProvider(
         hover.selector,
         hover.provider
       );

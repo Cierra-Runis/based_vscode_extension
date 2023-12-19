@@ -11,7 +11,7 @@ export abstract class Commands {
   static register(context: vscode.ExtensionContext): void {
     for (const command of this.commands) {
       console.log(`Registering Command ${command.command}`);
-      let disposable = vscode.commands.registerCommand(command.command, () =>
+      const disposable = vscode.commands.registerCommand(command.command, () =>
         command.register(context)
       );
       context.subscriptions.push(disposable);
