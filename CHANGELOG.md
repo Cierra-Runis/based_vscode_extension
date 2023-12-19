@@ -1,3 +1,7 @@
+## 0.0.10
+
+🌍Check if the class name matches the file name
+
 ## 0.0.9
 
 🔧 Fix PubLatestVersion hover error
