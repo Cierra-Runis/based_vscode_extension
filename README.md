@@ -10,8 +10,6 @@
 
 [📚 Introduction](#-Introduction)
 
-[📸 Screenshots](#-Screenshots)
-
 [📦 How to use](#-How-to-use)
 
 [⏳ Rate of progress](#-Rate-of-progress)
@@ -26,12 +24,31 @@
 
 # 📚 Introduction
 
-[awesome vscode](https://zhaomenghuan.js.org/note/vscode/awesome-vscode.html)
-[VSCode Extension API](https://code.visualstudio.com/api)
-
-# 📸 Screenshots
+Based VSCode Extension is a based vscode extension which helps you develop Flutter project faster and more convenient.
 
 # 📦 How to use
+
+## 🫧 Hover
+
+### pubLatestVersion
+
+Open `pubspec.yaml` and hover on dependencies, which fetches its latest version on pub.dev
+
+![pubLatestVersion](https://raw.githubusercontent.com/Cierra-Runis/based_vscode_extension/main/.github/pubLatestVersion.png)
+
+## 🎨 Color
+
+### classMatchFile
+
+Open `*.dart` and a color picker will present before the name of classes `🟩 => match | 🟧 => mismatch`
+
+![classMatchFile](https://raw.githubusercontent.com/Cierra-Runis/based_vscode_extension/main/.github/classMatchFile.png)
+
+## 👮‍♂️ Command
+
+Use `ctrl/cmd + shift + p`, enter `Based`
+
+![command](https://raw.githubusercontent.com/Cierra-Runis/based_vscode_extension/main/.github/command.png)
 
 # ⏳ Rate of progress
 
