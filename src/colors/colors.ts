@@ -29,17 +29,13 @@ export class Colors {
           const matches = doc.matchAll(reg);
 
           for (const match of matches) {
-            if (match.index === undefined) {
-              continue;
-            }
-
             const className = match[1].toLowerCase();
             const lowerCaseClassName = match[1].toLowerCase();
 
             if (className.startsWith("_")) {
               continue;
             }
-            const offset = match.index + "class ".length;
+            const offset = match!.index! + "class ".length;
             const color =
               lowerCaseClassName === lowerCaseFileName
                 ? new vscode.Color(0, 1, 0, 1)
