@@ -29,6 +29,10 @@ export class Colors {
           const matches = doc.matchAll(reg);
 
           for (const match of matches) {
+            if (match.index === undefined) {
+              continue;
+            }
+
             const className = match[1].toLowerCase();
             const lowerCaseClassName = match[1].toLowerCase();
 
