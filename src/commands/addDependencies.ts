@@ -1,11 +1,12 @@
 import * as vscode from "vscode";
 import { Command } from "./commands";
 import { Pubspec } from "../pubspec";
+import { Utils } from "../utils";
 
 export class AddDependencies implements Command {
   command: string = "based.addDependencies";
   async register(context: vscode.ExtensionContext): Promise<void> {
-    const workspaceFolder = vscode.workspace.workspaceFolders?.[0];
+    const workspaceFolder = await Utils.getWorkspace();
     if (workspaceFolder === undefined) {
       vscode.window.showErrorMessage("💢 No opened workspace.");
       return;
@@ -29,9 +30,11 @@ export class AddDependencies implements Command {
           "dart_date",
           "dynamic_color",
           "flutter_displaymode",
-          "flutter_riverpod",
+          "flutter_hooks",
           "flutter_svg",
           "freezed_annotation",
+          "hooks_riverpod",
+          "intl",
           "json_annotation",
           "material_color_utilities",
           "path_provider",

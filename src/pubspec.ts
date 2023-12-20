@@ -67,6 +67,27 @@ export abstract class Pubspec {
     await runCommand("dart run build_runner build", { cwd });
   }
 
+  static async createProject(
+    projectName: string,
+    org: string,
+    description: string,
+    cwd: string
+  ): Promise<void> {
+    const commands = [`flutter create . --project-name ${projectName} -e`];
+
+    if (org.length !== 0) {
+      commands.push(`--org ${org}`);
+    }
+
+    if (description.length !== 0) {
+      commands.push(`--description "${description}"`);
+    }
+
+    const command = commands.join(" ");
+
+    await runCommand(command, { cwd });
+  }
+
   static async addSdkDependency(
     dependency: string,
     cwd: string
@@ -110,7 +131,7 @@ export abstract class Pubspec {
 
 function runCommand(
   command: string,
-  options?: childProcess.ExecOptions
+  options: childProcess.ExecOptions
 ): Promise<string> {
   return new Promise((resolve, reject) => {
     childProcess.exec(command, options, (error, stdout, stderr) => {

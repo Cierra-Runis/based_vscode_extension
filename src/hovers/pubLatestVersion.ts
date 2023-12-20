@@ -39,8 +39,6 @@ export class PubLatestVersion implements Hover {
       const re = RegExp(/^\^(\d+\.\d+\.\d+(?:[+-]\S+)?)$/);
       const showFormat = re.exec(version);
 
-      console.log(showFormat?.[0], showFormat?.[1], version, latestVersion);
-
       const details =
         showFormat === null
           ? [
