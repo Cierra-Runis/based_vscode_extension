@@ -14,10 +14,25 @@ export class AddDependencies implements Command {
 
     vscode.window.showInformationMessage("🔥 Adding dependencies...");
 
+    await vscode.window.withProgress(
+      {
+        location: vscode.ProgressLocation.Notification,
+        title: "🔥 Adding dependencies...",
+        cancellable: false,
+      },
+      async (progress, token) => {
+        await AddDependencies.add(workspaceFolder.uri);
+        vscode.window.showInformationMessage("🚀 Added dependencies!");
+        progress.report({ increment: 100 });
+      }
+    );
+  }
+
+  static async add(workspaceFolder: vscode.Uri) {
     try {
       await Pubspec.addSdkDependencies(
         ["flutter_localizations"],
-        workspaceFolder.uri.fsPath
+        workspaceFolder.fsPath
       );
     } catch {}
 
@@ -45,7 +60,7 @@ export class AddDependencies implements Command {
           "url_launcher",
           "window_manager",
         ],
-        workspaceFolder.uri.fsPath
+        workspaceFolder.fsPath
       );
     } catch {}
 
@@ -59,10 +74,8 @@ export class AddDependencies implements Command {
           "riverpod_generator",
           "riverpod_lint",
         ],
-        workspaceFolder.uri.fsPath
+        workspaceFolder.fsPath
       );
     } catch {}
-
-    vscode.window.showInformationMessage("🚀 Added dependencies!");
   }
 }
