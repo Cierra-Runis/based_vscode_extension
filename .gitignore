@@ -3,4 +3,12 @@ dist
 node_modules
 .vscode-test/
 *.vsix
-example/**
+example/*
+**/*.g.dart
+**/*.freezed.dart
+!example/lib
+!example/assets
+!example/.vscode
+!example/analysis_options.yaml
+!example/pubspec.extent
+test

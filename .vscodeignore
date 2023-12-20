@@ -2,7 +2,16 @@
 .vscode-test/**
 src/**
 **/test
+
 example
+**/*.g.dart
+**/*.freezed.dart
+!example/lib
+!example/assets
+!example/.vscode
+!example/analysis_options.yaml
+!example/pubspec.extent
+
 **/*.js
 !out/extension.js
 .gitignore

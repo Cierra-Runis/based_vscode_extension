@@ -5,6 +5,13 @@ export abstract class Utils {
     return /^[a-zA-Z]+([A-Z][a-z]*)*$/.test(str);
   }
 
+  static toTitleCase(str: string): string {
+    return str
+      .split("_")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join("");
+  }
+
   static toSnakeCase(str: string): string {
     return str.replace(/([a-z])([A-Z])/g, "$1_$2").toLowerCase();
   }
