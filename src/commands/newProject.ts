@@ -132,7 +132,8 @@ export class NewProject implements Command {
               resolve();
             }, 3000)
           );
-          progress.report({ increment: 100 });
+          await Pubspec.runBuilder(workspaceFolder.fsPath);
+          await progress.report({ increment: 100 });
         }
       );
       vscode.commands.executeCommand("vscode.openFolder", workspaceFolder);
