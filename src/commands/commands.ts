@@ -1,6 +1,7 @@
 import * as vscode from "vscode";
 import { Create } from "./create";
 import { AddDependencies } from "./addDependencies";
+import { NewProject } from "./newProject";
 
 export interface Command {
   command: string;
@@ -19,5 +20,9 @@ export abstract class Commands {
     console.log(`Registered Commands`);
   }
 
-  static commands: Array<Command> = [new Create(), new AddDependencies()];
+  static commands: Array<Command> = [
+    new Create(),
+    new AddDependencies(),
+    new NewProject(),
+  ];
 }

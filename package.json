@@ -72,6 +72,10 @@
             {
                 "command": "based.create",
                 "title": "Based: Create..."
+            },
+            {
+                "command": "based.newProject",
+                "title": "Based: New Project"
             }
         ]
     },

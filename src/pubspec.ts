@@ -73,7 +73,7 @@ export abstract class Pubspec {
     description: string,
     cwd: string
   ): Promise<void> {
-    const commands = [`flutter create . --project-name ${projectName} -e`];
+    const commands = [`flutter create ${projectName} -e`];
 
     if (org.length !== 0) {
       commands.push(`--org ${org}`);

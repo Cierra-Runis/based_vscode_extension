@@ -6,10 +6,8 @@ import { createStateWithPersistence } from "./creates/createStateWithPersistence
 import { createStateWithFuture } from "./creates/createStateWithFuture";
 import { Utils } from "../utils";
 import { Pubspec } from "../pubspec";
-import { createProject } from "./creates/createProject";
 
 export enum Choice {
-  createProject = "$(project) Create new project",
   createPersistence = "$(database) Create persistence.dart",
   createColorSchemes = "$(symbol-color) Create color_schemes.dart",
   createStateWithPersistence = "$(pencil) Create state with Persistence",
@@ -33,10 +31,6 @@ export class Create implements Command {
     if (workspaceFolder === undefined) {
       vscode.window.showErrorMessage("💢 No workspace opened.");
       return;
-    }
-
-    if (choice === Choice.createProject) {
-      return createProject(context, workspaceFolder);
     }
 
     const projectName = await Pubspec.getProjectName(workspaceFolder);
