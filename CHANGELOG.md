@@ -1,3 +1,8 @@
+## 0.0.12
+
+1. 📖Improve AddDependencies command
+2. 🌍Implement `createProject`
+
 ## 0.0.11
 
 🌍Implement `createProject`
