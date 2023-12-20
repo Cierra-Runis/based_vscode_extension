@@ -6,15 +6,11 @@
 
 </div>
 
-`Latest update: 2023-12-03 10:49:46`
+`Latest update: 2023-12-21 02:03:41`
 
 [📚 Introduction](#-Introduction)
 
 [📦 How to use](#-How-to-use)
-
-[⏳ Rate of progress](#-Rate-of-progress)
-
-[📌 Cautions](#-Cautions)
 
 [🧑‍💻 Contributor](#-Contributor)
 
@@ -40,19 +36,17 @@ Open `pubspec.yaml` and hover on dependencies, which fetches its latest version 
 
 ### classMatchFile
 
-Open `*.dart` and a color picker will present before the name of classes `🟩 => match | 🟧 => mismatch`
+Open `*.dart` (excluded `main.dart`) and a color picker will present before the name of classes
+
+Statement: `🟩 => match | 🟧 => mismatch`
 
 ![classMatchFile](https://raw.githubusercontent.com/Cierra-Runis/based_vscode_extension/main/.github/classMatchFile.png)
 
-## 👮‍♂️ Command
+## 👮 Command
 
 Use `ctrl/cmd + shift + p`, enter `Based`
 
 ![command](https://raw.githubusercontent.com/Cierra-Runis/based_vscode_extension/main/.github/command.png)
-
-# ⏳ Rate of progress
-
-# 📌 Cautions
 
 # 🧑‍💻 Contributor
 
