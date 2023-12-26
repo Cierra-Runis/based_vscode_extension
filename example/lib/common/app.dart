@@ -17,7 +17,7 @@ abstract class App {
     WidgetsFlutterBinding.ensureInitialized();
 
     if (Platform.isWindows) {
-      await WindowControler.init();
+      await WindowController.init();
     }
 
     if (Platform.isAndroid) {

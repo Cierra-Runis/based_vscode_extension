@@ -1,1 +1,1 @@
-export 'window_controler.dart';
+export 'window_controller.dart';

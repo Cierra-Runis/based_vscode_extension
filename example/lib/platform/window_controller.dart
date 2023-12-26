@@ -1,6 +1,6 @@
 import 'package:example_app/index.dart';
 
-class WindowControler {
+class WindowController {
   static Future<void> init() async {
     await windowManager.ensureInitialized();
     const windowOptions = WindowOptions(
