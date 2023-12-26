@@ -1,5 +1,5 @@
 {
-    "version": "0.0.13",
+    "version": "0.0.14",
     "name": "based",
     "displayName": "Based",
     "description": "A based vscode extension for Flutter.",

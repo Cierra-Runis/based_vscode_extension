@@ -1,3 +1,7 @@
+## 0.0.14
+
+🔧 Fix file naming
+
 ## 0.0.13
 
 1. 🌍Implement `createProject`
@@ -10,11 +14,11 @@
 
 ## 0.0.11
 
-🌍Implement `createProject`
+🌍 Implement `createProject`
 
 ## 0.0.10
 
-🌍Check if the class name matches the file name
+🌍 Check if the class name matches the file name
 
 ## 0.0.9
 
