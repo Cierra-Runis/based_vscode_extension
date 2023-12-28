@@ -30,7 +30,7 @@ class {{upperCaseName}} extends _${{upperCaseName}} {
   late final Persistence _pers;
 
   @override
-  {{upperCaseName}} build() {
+  {{upperCaseName}}State build() {
     _pers = ref.watch(persistenceProvider);
     return {{upperCaseName}}State();
   }
