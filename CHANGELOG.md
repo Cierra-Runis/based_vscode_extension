@@ -1,3 +1,8 @@
+## 0.1.0
+
+1. 🌍Add `ref` snippets
+2. 🌍Add `context` snippets
+
 ## 0.0.15
 
 🔧Fix template

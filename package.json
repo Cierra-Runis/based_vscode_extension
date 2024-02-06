@@ -1,5 +1,5 @@
 {
-    "version": "0.0.15",
+    "version": "0.1.0",
     "name": "based",
     "displayName": "Based",
     "description": "A based vscode extension for Flutter.",
@@ -62,6 +62,14 @@
             {
                 "language": "dart",
                 "path": "./assets/snippets/riverpod.json"
+            },
+            {
+                "language": "dart",
+                "path": "./assets/snippets/context.json"
+            },
+            {
+                "language": "dart",
+                "path": "./assets/snippets/ref.json"
             }
         ],
         "commands": [

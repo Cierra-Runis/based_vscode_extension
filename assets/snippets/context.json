@@ -1,0 +1,14 @@
+{
+  "context_variable": {
+    "prefix": "_context_variable",
+    "body": [
+      "final ${1:variable} = context.${1:variable};"
+    ]
+  },
+  "context_l10n": {
+    "prefix": "_context_l10n",
+    "body": [
+      "final l10n = context.l10n;"
+    ]
+  }
+}

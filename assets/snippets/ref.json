@@ -1,0 +1,14 @@
+{
+  "ref_provider": {
+    "prefix": "_ref_provider",
+    "body": [
+      "final ${1:variable} = ref.watch(${1:variable}Provider);"
+    ]
+  },
+  "ref_notifier": {
+    "prefix": "_ref_notifier",
+    "body": [
+      "final set${1:Variable} = ref.watch(${2:variable}Provider.notifier);"
+    ]
+  }
+}
